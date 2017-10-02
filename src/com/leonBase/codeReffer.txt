@@ -1,0 +1,17 @@
+
+
+//役に立つのメッソドをまとまる。
+
+//正規式でURLを判断し、ドメインを切り出す
+public String getUrlDomain(String url) {
+      String reqular = "(http?://[^/]+/)";
+      Matcher m = Pattern.compile(reqular).matcher(url);
+      if (m.find()) {
+          String domain = m.group(1);
+          domain = domain.replaceAll("http:", "").replaceAll("/", "");
+          return domain;
+      } else {
+          return null;
+      }
+  }
+  
