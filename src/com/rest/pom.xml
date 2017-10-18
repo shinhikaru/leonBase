@@ -1,0 +1,16 @@
+    <dependencies>
+    <dependencyManagement>
+            ...
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-servlet</artifactId>
+                <version>1.17</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-server-linking</artifactId>
+                <version>1.17</version>
+            </dependency>
+          </dependencies>
+          ...
+    </dependencyManagement>
