@@ -1,0 +1,27 @@
+    <!-- Jersey  -->
+    <servlet>
+        <servlet-name>JerseyWebApplication</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.rest.RestApplication</param-value>
+        </init-param>
+        <init-param>
+            <param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
+            <param-value>jcom.rest.FWContainerResponseFilter</param-value>
+        </init-param>
+        <init-param>
+            <param-name>com.sun.jersey.spi.container.ResourceFilters</param-name>
+            <param-value>com.rest.FWResourceFilterFactory</param-value>
+        </init-param>
+	<init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.rest</param-value>
+	</init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JerseyWebApplication</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+    <!-- Jersey  -->
